@@ -1,0 +1,43 @@
+.dashboard-admin{
+  padding: 40px;
+}
+
+.protected{
+  margin-bottom: -17px;
+}
+
+.table-striped{
+  margin-top: 20px;
+}
+
+.navbar-admin{
+  display: flex;
+}
+
+.tfi.nav{
+  color: white;
+}
+
+.header-table{
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  text-align: center;
+}
+
+.body{
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  text-align: center;
+}
+
+.button-delete{
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.btn-success{
+  margin-top: 80px;
+}

@@ -1,0 +1,26 @@
+.login{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.picture-side{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a2d6f9;
+}
+
+.picture-side img{
+  width: 500px;
+}
+
+.login-right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
