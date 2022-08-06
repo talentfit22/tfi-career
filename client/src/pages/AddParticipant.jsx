@@ -64,11 +64,12 @@ const AddParticipant = () => {
       expected_salary: expected_salary
     }
 
+    
     postParticipantApi(data)
     .then(() => {
-      alert('data sent')
+      alert("data sent successfully")
       document.location.reload(true)
-    })
+    }) 
   }
 
   return (
@@ -120,7 +121,7 @@ const AddParticipant = () => {
         </select>
         <label htmlFor="year">Duration of work experience:</label>
         <div className='year-exp'>
-          <input className='data-input-date' type="text" onChange={(e) => setYearExperience1(e.target.value)} placeholder='Number only. exp: 3'/>
+          <input className='data-input-date' type="text" onChange={(e) => setYearExperience1(e.target.value)} placeholder='Number only. exp: 3 without(.,)'/>
           <h5>years</h5>
         </div>
         <label htmlFor="company">Company name:</label>
@@ -142,7 +143,7 @@ const AddParticipant = () => {
         </select>
         <label htmlFor="year">Duration of work experience:</label>
         <div className='year-exp'>
-          <input className='data-input-date' type="text" onChange={(e) => setYearExperience2(e.target.value)} placeholder='Number only. exp: 3'/>
+          <input className='data-input-date' type="text" onChange={(e) => setYearExperience2(e.target.value)} placeholder='Number only. exp: 3 without(.,)'/>
           <h5>years</h5>
         </div>
         
@@ -153,9 +154,9 @@ const AddParticipant = () => {
         <label htmlFor="date">End date:</label>
         <input className='data-input-date' type="date" onChange={(e) => setEndDatePosition2(e.target.value)} />
         <label htmlFor="salary">Current salary:</label>
-        <input className='data-input' type="text" onChange={(e) => setCurrentSalary(e.target.value)} placeholder=' exp: 1000000'/>
+        <input className='data-input' type="text" onChange={(e) => setCurrentSalary(e.target.value)} placeholder=' exp: 1000000 without(.,)'/>
         <label htmlFor="salary">Expected salary:</label>
-        <input className='data-input' type="text" onChange={(e) => setExpectedSalary(e.target.value)} placeholder='exp: 1000000'/>
+        <input className='data-input' type="text" onChange={(e) => setExpectedSalary(e.target.value)} placeholder='exp: 1000000 without(.,)'/>
 
         <button className='btn btn-primary' type='submit'>Submit</button>
       </form>

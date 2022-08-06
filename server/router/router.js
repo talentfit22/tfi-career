@@ -12,18 +12,18 @@ const { authSuperAdmin } = require('../midlewares/superadmin/authSuperAdmin');
 const {registerSuperAdminValidation, loginSuperAdminValidation} = require('../validators/auth-superAdmin');
 
 // superadmin router
-route.get('/api/get-superadmin', getSuperadmin);
-route.get('/api/protected', authSuperAdmin, protectedSuperAdmin);
-route.post('/api/register', registerSuperAdminValidation, validationSuperAdmin, registerSuperAdmin);
-route.post('/api/login', loginSuperAdminValidation, validationSuperAdmin, loginSuperAdmin);
-route.get('/api/logout', logoutSuperAdmin);
+route.get('/get-superadmin', getSuperadmin);
+route.get('/protected', authSuperAdmin, protectedSuperAdmin);
+route.post('/register', registerSuperAdminValidation, validationSuperAdmin, registerSuperAdmin);
+route.post('/login', loginSuperAdminValidation, validationSuperAdmin, loginSuperAdmin);
+route.get('/logout', logoutSuperAdmin);
 
 // participant
 const { getAllParticipant, postParticipants, deleteParticipant} = require('../controllers/participantController')
 
 //participant router
-route.get('/api/get-participants', getAllParticipant);
-route.post('/api/post-participant', postParticipants);
-route.delete('/api/delete-participant/:id', deleteParticipant);
+route.get('/get-participants', getAllParticipant);
+route.post('/post-participant', postParticipants);
+route.delete('/delete-participant/:id', deleteParticipant);
 
 module.exports = route;

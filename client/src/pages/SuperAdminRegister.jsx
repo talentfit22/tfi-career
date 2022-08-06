@@ -29,7 +29,7 @@ const SuperAdminRegister = () => {
       setError('')
       setSuccess(data.message)
       setValues({ email: '', password: '' })
-      navigate('/login')
+      navigate('/login/admin-tfi')
     } catch (error) {
       setError(error.response.data.errors[0].msg)
       setSuccess('')

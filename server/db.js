@@ -3,11 +3,11 @@ config()
 const Pool = require('pg').Pool;
 
 const pool = new Pool ({
-  user: process.env.user,
-  password: process.env.password,
-  host: process.env.host,
-  database: process.env.database,
-  port: process.env.host
+  user: "postgres",
+  password: "Rauf10",
+  host: "localhost",
+  database: "talentfit_database",
+  port: 5432
 })
 
 module.exports = pool;

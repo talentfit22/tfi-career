@@ -9,13 +9,13 @@ import AddParticipant from './pages/AddParticipant';
 const PrivateRoutes = () => {
   const { isAuth } = useSelector((state) => state.auth)
 
-  return <>{isAuth ? <Outlet /> : <Navigate to='/login' />}</>
+  return <>{isAuth ? <Outlet /> : <Navigate to='/login/admin-tfi' />}</>
 }
 
 const RestrictedRoutes = () => {
   const { isAuth } = useSelector((state) => state.auth)
 
-  return <>{!isAuth ? <Outlet /> : <Navigate to='/dashboard' />}</>
+  return <>{!isAuth ? <Outlet /> : <Navigate to='/dashboard/admin-tfi' />}</>
 }
 
 
@@ -27,12 +27,12 @@ function App() {
         <Route path='/' element={<AddParticipant/>}/>
         
         <Route element={<PrivateRoutes />}>
-          <Route path='/dashboard' element={<SuperAdminDashboard />} />
+          <Route path='/dashboard/admin-tfi' element={<SuperAdminDashboard />} />
         </Route>
 
         <Route element={<RestrictedRoutes />}>
-          <Route path='/register' element={<SuperAdminRegister />} />
-          <Route path='/login' element={<SuperAdminLogin />} />
+          <Route path='/register/admin-tfi' element={<SuperAdminRegister />} />
+          <Route path='/login/admin-tfi' element={<SuperAdminLogin />} />
         </Route>
       </Routes>
     </BrowserRouter>
