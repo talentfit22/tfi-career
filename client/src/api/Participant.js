@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = process.env.NODE_ENV === 'production'? '/' : 'http://localhost:8000';
+const baseUrl = process.env.NODE_ENV === 'production'? '/api' : 'http://localhost:8000/api';
 
 export const postParticipantApi = async (params) => {
 

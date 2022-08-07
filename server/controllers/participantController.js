@@ -1,5 +1,4 @@
 const pool = require('../db')
-const moment = require('moment')
 
 module.exports ={
   getAllParticipant: async (req, res) =>{
@@ -11,10 +10,6 @@ module.exports ={
     }
   },
   postParticipants: async (req, res) => {
-    const dateFormat = () =>{
-      let df = moment().format('YYYY-MM-d')
-      return df
-    }
     try {
       const {
         applied_position,
