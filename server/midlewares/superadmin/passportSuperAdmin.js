@@ -1,6 +1,3 @@
-const { config } = require('dotenv');
-config()
-
 const passport = require('passport');
 const { Strategy } = require('passport-jwt');
 const { SECRET } = require('../../constants');
@@ -14,7 +11,7 @@ const cookieExtractor = (req) => {
 }
 
 const option = {
-  secretOrKey: process.env.SECRET,
+  secretOrKey: SECRET,
   jwtFromRequest: cookieExtractor
 }
 
